@@ -1,6 +1,7 @@
 package ekgo.study.spring;
 
 import ekgo.study.spring.tomcat.TomcatServer;
+import ekgo.study.spring.tomcat.impl.TomcatServerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +14,7 @@ public class Application {
     public static void main(String args[]) throws Exception{
         try{
             logger.info("Server Starting..");
-            TomcatServer tomcat = new TomcatServer();
+            TomcatServer tomcat = new TomcatServerImpl();
             tomcat.start();
         }catch (Exception e){
             e.printStackTrace();
